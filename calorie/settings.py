@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'calorie_app',
     'rest_framework',
+    'djoser',
 ]
 
 MIDDLEWARE = [
