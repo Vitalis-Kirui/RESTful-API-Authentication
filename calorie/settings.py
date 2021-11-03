@@ -102,6 +102,10 @@ REST_FRAMEWORK = {
 DJOSER = {
     'LOGIN_FIELD':'email',
     'USER_CREATE_PASSWORD_RETYPE':True,
+    'SERIALIZERS': {
+        'user_create': 'calorie_app.serializers.UserCreateSerializer',
+        'user':'calorie_app.serializers.UserCreateSerializer',
+    },
 }
 
 # Password validation
