@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'djoser',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,7 +51,13 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:4200'
 ]
 
 ROOT_URLCONF = 'calorie.urls'
@@ -101,7 +108,7 @@ REST_FRAMEWORK = {
 
 DJOSER = {
     'LOGIN_FIELD':'email',
-    'USER_CREATE_PASSWORD_RETYPE':True,
+    # 'USER_CREATE_PASSWORD_RETYPE':True,
     'SERIALIZERS': {
         'user_create': 'calorie_app.serializers.UserCreateSerializer',
         'user':'calorie_app.serializers.UserCreateSerializer',
