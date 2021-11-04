@@ -20,5 +20,5 @@ from calorie import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('checkserver/', views.index, name = 'index'),
-    path('calorie_app/', include('calorie_app.urls')),
+    path('', include('calorie_app.urls')),
 ]

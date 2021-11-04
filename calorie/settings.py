@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'calorie.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'calorie',
+        'NAME': 'calorie_app',
         'USER': 'moringa',
     'PASSWORD':'Computer757575.',
     }
